@@ -107,6 +107,16 @@
                     }
                 }
             }
+            function myFormInput() {
+                var x, text;
+                x = document.getElementById("num").value;
+                if (isNaN(x) || x < 1 || x > 10) {
+                    text = "Input is not valid";
+                } else {
+                    text = "Input is valid";
+                }
+                document.getElementById("demoform").innerHTML = text;
+            }
         </script>
         
     </head>
@@ -165,7 +175,13 @@
                     user returns to the webpage, this is because when the user entered their name, it was stored in a cookie.
                 </p>
                 <p>Cookies aids functionality to a website by storing user information which can lead to recommended advertisements and store information which they have entered before so they don't have to remember it.</p>
-
+                <h3>Form Input Validation</h3>
+                <p>Below is an example of a form input with a prompt on what to input:</p>
+                <p>Please enter a number between 1 and 10:</p>
+                <input id="num">
+                <button type="button" onclick="myFormInput()">Submit</button>
+                <p id="demoform"></p>
+              
             </div>
         </div>
 
