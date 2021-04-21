@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Assignment 3 Client Side Customisation of Web Pages/Website Production - Milo Searle</title>
+        <style>
+            .header{
+                background-color: #f1f1f1;
+                text-align: center;
+                padding: 20px;
+            }
+            .topnav {
+                overflow: hidden;
+                background-color: #333;
+            }
+            .topnav a{
+                float: left;
+                display: block;
+                color: #f2f2f2;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+            .topnav a:hover{
+                background-color: #ddd;
+                color: black;
+            }
+            .column {
+                float: left;
+                width: 100%
+            }
+            .row:after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+            @media screen and (max-width: 600px) {
+                .column{
+                    width: 100%;
+                }
+            }
+            .flex-rapper {
+                display: flex;
+                min-height: 94vh;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+            .footer {
+                background-color: #f1f1f1;
+                text-align: center;
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class = "header">
+            <h1>Welcome to Assignment 3 of Website Production</h1>
+        </div>
+    </body>
