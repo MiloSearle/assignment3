@@ -63,7 +63,17 @@
                 } else {
                     txt = "You pressed Cancel!";
                 }
-                document.getElementById("demo").innerHTML = txt;
+                document.getElementById("democonfirm").innerHTML = txt;
+            }
+            function myPromptBox() {
+                var txt;
+                var person = prompt("Please enter your name","");
+                if (person == null || person == "") {
+                    txt = "User cancelled.";
+                } else {
+                    txt = "Hello " + person + ".";
+                }
+                document.getElementById("demoprompt").innerHTML = txt;
             }
         </script>
         
@@ -112,7 +122,12 @@
                 <p>An alert box aids functionality to a website as it can act as a warning to users that click on the button and make sure if this was their intention.</p>
                 <p>The button below will bring up a confirm box.</p>
                 <button onclick="myConfirmBox()">Click me!</button>
-                <p id = "demo"></p>
+                <p id = "democonfirm"></p>
+                <p>A confirm box aids functionality to a website the same way an alert box does as it ensures that the user does want to complete this action.</p>
+                <p>The button below will bring up a prompt box.</p>
+                <button onclick="myFunction()">Click me!</button>
+                <p id="demoprompt"></p>
+                   
             </div>
         </div>
 
