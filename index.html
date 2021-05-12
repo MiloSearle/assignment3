@@ -117,13 +117,11 @@
                 }
                 document.getElementById("demoform").innerHTML = text;
             }
-            function MathRound() {
-                if (!Math.trunc) {
-                    Math.trunc = function(number) {
-                        return number < 0 ? Math.ceil(number) : Math.floor(number);
-                    }
-                }
-            }
+            // before running the transpiler
+            height = height ?? 100;
+
+            // after running the transpiler
+            height = (height !== undefined && height !== null) ? height : 100;
         </script>
         
     </head>
@@ -206,7 +204,11 @@
                     they normally wouldn't be able to see, creating a wider audience to your website. An example of some code which can be fixed is the Math.trunc(n) function which rounds a decimal number to a whole number. This function works in newer browsers but not older browsers.
                     In order to allow it to work in older browsers, you need to declare the missing function in the code. Here is the code:</p>
                 <img src = "polyfill code example.PNG" alt = "Polyfill Code Example"> 
-                </p>
+                <p>The if function means that if Math.trunc does not exist then use Math.ceil and Math.floor as these exist in older browsers and replicate the function of Math.trunc.</p>
+                <p>Another fix is something called a transpiler. A transpiler is an automatic system which analyses the code and converts it into older syntax constructs so that it performs 
+                    the same function as intended and can work in older browsers. Here is an example of how it works:</p>
+                <img src = "transpiler code example.PNG" alt = "Transpiler Code Example">
+                <p>Here you can see that the above code would only work in newer browsers and would fail in older browsers, but the one below works in both newer browsers and older browsers meaning that everyone gets to see the features and functions on your website.</p>
                 <h1>Client Issues with a Website's Performance</h1>
                 <h2>User's Choice of Device</h2>
                 <p>A user's choice of device can affect website performance and its features as different devices have different limits meaning that if someone runs a website on a high-end PC compared to a phone, the PC is going to be able to load and run the website 
