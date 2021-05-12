@@ -117,6 +117,13 @@
                 }
                 document.getElementById("demoform").innerHTML = text;
             }
+            function MathRound() {
+                if (!Math.trunc) {
+                    Math.trunc = function(number) {
+                        return number < 0 ? Math.ceil(number) : Math.floor(number);
+                    }
+                }
+            }
         </script>
         
     </head>
@@ -193,7 +200,12 @@
                     that browser it works on. Below is an example of how it works: </p>
                 <img src = "caniuse example.PNG" alt = "CanIUse example">
                 <p>As you can see, its shows a specific feature, in this example CSS Grid Layout, a description of the feature and shows all the browsers and the versions that don't and do work. In the tabs below, it has notes which can show fixes for it if you may
-                    be wondering why a feature is not working, for example it says for note number 3 "Enabled in FireFox through layout.css.grid.enabled" to enable the feature.
+                    be wondering why a feature is not working, for example it says for note number 3 "Enabled in FireFox through layout.css.grid.enabled" to enable the feature. The resources tab is the most useful in the website as it provides fixes for features that
+                    aren't compatible such as polyfill.
+                <p>Polyfill is used in JavaScript which allows you to use features in older browsers and older versions of browsers that would work in newer browsers. This means that users that use older versions of a browser or an old browser can now see features which 
+                    they normally wouldn't be able to see, creating a wider audience to your website. An example of some code which can be fixed is the Math.trunc(n) function which rounds a decimal number to a whole number. This function works in newer browsers but not older browsers.
+                    In order to allow it to work in older browsers, you need to declare the missing function in the code. Here is the code:</p>
+                <img src = "polyfill code example.PNG" alt = "Polyfill Code Example"> 
                 </p>
                 <h1>Client Issues with a Website's Performance</h1>
                 <h2>User's Choice of Device</h2>
